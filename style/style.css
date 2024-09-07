@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, blue, cyan);
+  background-size: 500% 100%;
+  animation: animarFundo 3s alternate infinite;
+}
+
+@keyframes animarFundo {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+main {
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.867);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+main .relogio {
+  width: 50%;
+  height: 70%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+main .relogio span:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(to right, transparent, blue, cyan);
+  animation: animacao1 2s linear infinite;
+}
+
+@keyframes animacao1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+main .relogio span:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  background-image: linear-gradient(to bottom, transparent, blue, cyan);
+  animation: animacao2 2s linear infinite;
+  animation-delay:1s;
+}
+
+@keyframes animacao2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+main .relogio span:nth-of-type(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(to left, transparent, blue, cyan);
+  animation: animacao3 2s linear infinite;
+}
+
+@keyframes animacao3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+main .relogio span:nth-of-type(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-image: linear-gradient(to top, transparent, blue, cyan);
+  animation: animacao4 2s linear infinite;
+  animation-delay:1s;
+}
+
+@keyframes animacao4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+main .relogio h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: 35%;
+}
+
+main .relogio h3 {
+  color: white;
+  font-size: 30px;
+}
